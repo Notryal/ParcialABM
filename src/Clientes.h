@@ -24,13 +24,13 @@ typedef struct
 #endif
 /**
  * @fn int InicializarClientes(eCliente[], int)
- * @brief
+ * @brief Inicializa el array de clientes
  *
  * @pre
  * @post
- * @param clientes
- * @param tam
- * @return
+ * @param clientes Array clientes
+ * @param tam tamano del array
+ * @return -1 salio todo mal 0 todo bien
  */
 int inicializarClientes(eCliente clientes[], int tam);
 
@@ -46,36 +46,133 @@ int cargarUnCliente(eCliente clientes[], int tam, int* ultimaIdIngresada);
 
 /**
  * @fn int BuscarEspacioLibre(eCliente[], int)
- * @brief
+ * @brief busca un espacio libre en el array clientes
  *
  * @pre
  * @post
- * @param clientes
- * @param tam
- * @return
+ * @param clientes es el Array de clientes
+ * @param tam es el tamano del array
+ * @return -1 salio todo mal 0 todo bien
  */
 int buscarEspacioLibre(eCliente clientes[], int tam);
 /**
  * @fn int IngresarUnCliente(eCliente*)
- * @brief
+ * @brief permite ingresar datos de un cliente
  *
  * @pre
- * @post
- * @param cliente
- * @return
+ * @param clientes es el Array de clientes
+ * @param tam es el tamano del array
+ * @return -1 salio todo mal 0 todo bien
  */
 int ingresarUnCliente(eCliente* cliente);
 
+/**
+ * @fn int getDireccion(char*)
+ * @brief permite ingresar altura y direccion
+ *
+ * @pre
+ * @post
+ * @param direccion datos del cliente
+ * @return -1 salio todo mal 0 todo bien
+ */
 int getDireccion(char* direccion);
 
+/**
+ * @fn int mostrarClientes(eCliente*, int)
+ * @brief muestra todos los clientes con datos
+ *
+ * @pre
+ * @post
+ * @param clientes es el Array de clientes
+ * @param tam es el tamano del array
+ * @return -1 salio todo mal 0 todo bien
+ */
 int mostrarClientes(eCliente* cliente, int tam);
+
+/**
+ * @fn int mostrarUnCliente(eCliente)
+ * @brief muestra los datos de un solo cliente
+ *
+ * @pre
+ * @post
+ * @param cliente array de cliente de una posicion
+ * @return -1 salio todo mal 0 todo bien
+ */
 int mostrarUnCliente(eCliente cliente);
+
+/**
+ * @fn int fullCliente(eCliente[], int)
+ * @brief verifica que el espacio de un cliente tenga datos
+ *
+ * @pre
+ * @post
+ * @param clientes es el Array de clientes
+ * @param tam es el tamano del array
+ * @return -1 salio todo mal 0 todo bien
+ */
 int fullCliente(eCliente clientes[], int tam);
 
+/**
+ * @fn int modificarCliente(eCliente[], int, int)
+ * @brief modifica la direccion y localidad de un cliente
+ *
+ * @pre
+ * @post
+ * @param clientes es el Array de clientes
+ * @param tam es el tamano del array
+ * @param id id de cliente
+ * @return -1 salio todo mal 0 todo bien
+ */
 int modificarCliente(eCliente clientes[], int tam, int id);
+
+/**
+ * @fn int buscarClienteId(eCliente[], int, int)
+ * @brief busca a un por su ID y valida que este ocupado
+ *
+ * @pre
+ * @post
+ * @param clientes es el Array de clientes
+ * @param tam es el tamano del array
+ * @param id id de cliente
+ * @return -1 salio todo mal 0 todo bien
+ */
 int buscarClienteId(eCliente clientes[], int tam, int id);
 
+/**
+ * @fn int eliminarCliente(eCliente[], int, int)
+ * @brief da de baja a un cliente
+ *
+ * @pre
+ * @post
+ * @param clientes es el Array de clientes
+ * @param tam es el tamano del array
+ * @param id id de cliente
+ * @return -1 salio todo mal 0 todo bien
+ */
 int eliminarCliente(eCliente clientes[], int tam, int id);
 
+/**
+ * @fn int mostrarClientePedido(eCliente[], int, int)
+ * @brief muestra los clientes con pedido
+ *
+ * @pre
+ * @post
+ * @param clientes es el Array de clientes
+ * @param tam es el tamano del array
+ * @param id id de cliente
+ * @return -1 salio todo mal 0 todo bien
+ */
 int mostrarClientePedido(eCliente clientes[], int tam, int idCliente);
+
+/**
+ * @fn int mostrarClientesEliminados(eCliente[], int, int)
+ * @brief Muestra todos los clientes dados de baja
+ *
+ * @pre
+ * @post
+ * @param clientes array clientes
+ * @param tam tamano del array clientes
+ * @param id id de los clientes
+ * @return -1 salio todo mal 0 todo bien
+ */
 int mostrarClientesEliminados(eCliente clientes[], int tam, int id);
