@@ -10,7 +10,7 @@ int informePedidosCompletados(ePedido pedidos[], int tamPedidos, eCliente client
 int informePedidosPendientesLocalidad(ePedido pedidos[], int tamPedidos, eCliente clientes[], int tamClientes, int ultimoPedido);
 int informePromedioPP(ePedido pedidos[], int tamPedidos, eCliente clientes[], int tamClientes, int ultimoPedido, int ultimoCliente);
 int informeClientesMayorPendientes(ePedido pedidos[], int tamPedidos, eCliente clientes[], int tamClientes, int ultimoPedido, int ultimoCliente);
-int informesClientesMayorCompletados(ePedido pedidos[], int tamPedidos, eCliente clientes[], int tamClientes, int ultimoPedido, int ultimoCliente);
+int informeClientesMayorCompletados(ePedido pedidos[], int tamPedidos, eCliente clientes[], int tamClientes, int ultimoPedido, int ultimoCliente);
 
 
 #endif /* INFORMES_H_ */
